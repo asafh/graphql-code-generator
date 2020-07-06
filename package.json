@@ -6,7 +6,7 @@
     "clean": "rimraf node_modules packages/{*,plugins/*/*,presets/*,utils/*}/node_modules",
     "prebuild": "rimraf packages/{*,plugins/*/*,presets/*,utils/*}/dist",
     "build": "tsc --project tsconfig.json && bob build",
-    "watch-build": "tsc-watch --project tsconfig.json --listFiles --onSuccess \"bob build\"",
+    "watch-build": "tsc-watch --project tsconfig.json --onSuccess \"bob build\"",
     "test": "jest --no-watchman",
     "lint": "eslint --ext .ts .",
     "prettier": "prettier --ignore-path .gitignore --write --list-different \"**/*.{ts,tsx,graphql,yml}\"",
